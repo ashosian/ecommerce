@@ -91,7 +91,7 @@ export const productApi = createApi({
         method: 'GET',
 
         params: {
-          search: search
+          keyword: search
         }
       })
 
