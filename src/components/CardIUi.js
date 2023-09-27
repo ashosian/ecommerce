@@ -19,11 +19,16 @@ const CardUi = ({ product }) => {
 
   return (
     <Card className="mt-6 w-full cursor-pointer  transition-all delay-75 shadow-lg hover:scale-90 hover:shadow-2xl" onClick={() => nav(`/product/detail/${product._id}`)}>
-      <CardHeader color="blue-gray" className="relative h-56 ">
-        <Image
+      <CardHeader color="blue-gray" className="relative h-40">
+
+        <img
+          className="h-full w-[100vh] object-fill"
           src={`${baseUrl}${product.product_image}`}
-          fallback={<Shimmer width={800} height={600} className="w-full h-full" />}
+          fallback={<Shimmer width={800} height={600}
+          />}
+
         />
+
 
       </CardHeader>
       <CardBody>

@@ -60,7 +60,7 @@ const ProductList = () => {
 
 
   return (
-    <Card className="h-[80vh] w-full overflow-hidden">
+    <Card className=" w-full overflow-hidden">
       <CardHeader floated={false} shadow={false} className="rounded-none">
         <div className="mb-5 flex items-center justify-between gap-8">
           <div>

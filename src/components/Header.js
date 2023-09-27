@@ -88,8 +88,9 @@ const Header = () => {
   return (
 
 
-    <Navbar className=" p-2 px-7 mx-auto bg-black ">
+    <Navbar className=" p-2 px-7 mx-auto bg-black h-[10vh]">
       <div className=" flex justify-between text-white">
+
         <Typography
           className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
         >
