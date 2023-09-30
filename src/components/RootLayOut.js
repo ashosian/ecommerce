@@ -9,7 +9,7 @@ const RootLayOut = () => {
       <Header />
 
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

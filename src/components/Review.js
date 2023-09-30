@@ -75,10 +75,11 @@ const Review = ({ product }) => {
 
 
   return (
-    <div className="p-5 h-[100vh]">
-      <h1 className="text-xl font-semibold tracking-wider mb-2">Add Reviews</h1>
+    <div className="p-5">
+
 
       {!userInfo?.isAdmin && <form onSubmit={formik.handleSubmit} className="space-y-4 ">
+        <h1 className="text-xl font-semibold tracking-wider mb-2">Add Reviews</h1>
         <div className="w-96">
           <Textarea
 

@@ -1,4 +1,6 @@
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import React, { useState } from 'react'
+import { useNavigate, useParams } from 'react-router';
+import { useItemByPageQuery, useRemoveProductMutation } from '../../features/product/productApi';
 import { PencilIcon, UserPlusIcon, TrashIcon } from "@heroicons/react/24/solid";
 import {
   Card,
@@ -20,29 +22,25 @@ import {
   DialogBody,
   DialogFooter,
 } from "@material-tailwind/react";
-import { useGetAllProductsQuery, useRemoveProductMutation } from "../../features/product/productApi";
+import { useSelector } from 'react-redux';
 import { baseUrl } from "../../features/constant";
-import { Fragment, useState } from "react";
-import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
-import { useSelector } from "react-redux";
 
 const TABLE_HEAD = ["Products", "Price", "Created At", "Edit", "Delete"];
 
 
 
-
-const ProductList = () => {
+const ProductList2 = () => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(!open);
+  const { pages } = useParams();
   const nav = useNavigate();
   const { userInfo } = useSelector((store) => store.userInfo);
-
-  const { data, isLoading, isError, error } = useGetAllProductsQuery();
+  const { data, isLoading, isError, error } = useItemByPageQuery(
+    pages);
 
   const [removeProduct, { isLoading: load, isError: isErr, error: err }] = useRemoveProductMutation();
-
 
   const handleRemove = async (query) => {
     try {
@@ -52,6 +50,7 @@ const ProductList = () => {
     }
   }
 
+
   if (isLoading) {
     return <div className='h-[400px] w-[400px] mx-auto mt-7'>
       <dotlottie-player src="https://lottie.host/29061f9b-bee7-4e7e-8ee2-6cf4511fc2ce/Ru41Z8Q9vh.json" background="#fff" speed="1" loop autoplay></dotlottie-player>
@@ -59,7 +58,7 @@ const ProductList = () => {
     </div>
   }
 
-
+  console.log(data);
   return (
     <Card className=" w-full overflow-hidden">
       <CardHeader floated={false} shadow={false} className="rounded-none">
@@ -206,11 +205,7 @@ const ProductList = () => {
 
 
     </Card>
-
   )
 }
 
-
-
-
-export default ProductList
+export default ProductList2

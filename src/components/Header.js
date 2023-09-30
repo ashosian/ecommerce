@@ -88,13 +88,29 @@ const Header = () => {
   return (
 
 
-    <Navbar className=" p-2 px-7 mx-auto bg-black h-[10vh]">
+    <Navbar className=" p-2 px-7 mx-auto bg-black h-[10vh] md:h-[12vh]">
       <div className=" flex justify-between text-white">
 
+
+        <Menu>
+          <MenuHandler>
+            <i className="fa-solid fa-bars hidden md:flex items-center">
+
+            </i>
+          </MenuHandler>
+          <MenuList className='hidden md:flex  space-y-2 flex-col items-center'>
+            <NavLink to='/'>Home</NavLink>
+            <NavLink to='/about'>About</NavLink>
+            <NavLink to='/contact'>Contact</NavLink>
+          </MenuList>
+        </Menu>
+
+
         <Typography
-          className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
+          className="mr-4 ml-2 cursor-pointer py-1.5 font-medium md:hidden"
         >
-          <NavLink to='/' replace> Home</NavLink>
+
+          <NavLink className="flex items-center gap-2" to='/' replace><img className="h-10 w-10 " src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fruit-logo-design-template-7e683dfd73ca0b9689c4e78f4efce998_screen.jpg?ts=1638214676" alt="" />  Home</NavLink>
         </Typography>
 
 
@@ -104,7 +120,7 @@ const Header = () => {
 
           <form onSubmit={formik.handleSubmit}>
 
-            <div className="box2 space-x-7 flex items-center">
+            <div className="box2 space-x-7 flex items-center ">
 
               <div className="relative flex w-full gap-2 md:w-max">
                 <Input
@@ -115,7 +131,7 @@ const Header = () => {
                   label="Search fruits"
                   className="pr-20"
                   containerProps={{
-                    className: "min-w-[400px]",
+                    className: "max-w-[500px] md:w-[200px] ",
                   }}
                 />
 
@@ -135,13 +151,15 @@ const Header = () => {
           </form>
 
 
-          <div className="space-x-5">
+          <div className="space-x-5 md:hidden">
 
 
             <NavLink to='/about'>About</NavLink>
             <NavLink to='/contact'>Contact</NavLink>
             {userInfo === null && <NavLink to='/user/login'>Login</NavLink>}
           </div>
+
+
 
 
 

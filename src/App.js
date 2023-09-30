@@ -23,6 +23,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Search from './pages/Search';
 import SearchPage from './pages/SearchPage';
+import ProductList2 from './pages/AdminPage/ProductList2';
 
 
 const App = () => {
@@ -67,6 +68,7 @@ const App = () => {
             <Route path='user/login' element={<Login />} />
             <Route path='user/SignUp' element={<SignUp />} />
             <Route path='products/all' element={<ProductList />} />
+            <Route path='productlist2/:pages' element={<ProductList2 />} />
             <Route path='product/add' element={<AddProduct />} />
             <Route path='product/:id' element={<EditProduct />} />
             <Route path='user/allDetail' element={<AdminProfile />} />
