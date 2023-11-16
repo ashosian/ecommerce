@@ -1,12 +1,9 @@
 import React from 'react'
-import { useGetAllProductsQuery } from '../features/product/productApi'
-import CardUi from '../components/CardIUi';
 import { Carousel, Typography, Button } from "@material-tailwind/react";
 import { useNavigate } from 'react-router';
-
-
-
-const HomePage = () => {
+import { useGetAllProductsQuery } from '../features/product/productApi';
+import CardUi from '../components/CardIUi';
+const Fruits = () => {
   const nav = useNavigate();
   const { data, isLoading, isError, error } = useGetAllProductsQuery();
 
@@ -19,20 +16,9 @@ const HomePage = () => {
     </div>
   }
 
-
   return (
-    <div className=''>
-      <div className="background h-[90vh] bg-white grid grid-cols-2">
-        <div className='flex justify-center items-center flex-col'>
-          <p className='text-2xl font-bold md:text-sm'>Trade-in-Offer</p>
-          <p className='text-6xl font-bold md:text-xl text-center'>Super value deals</p>
-          <p className='text-6xl font-bold text-teal-400 lg:text-center'>On all fruits and juices</p>
-          <p className='my-10 text-2xl cursor-pointer hover:scale-105 font-bold hover:text-teal-400'>Shop now</p>
-        </div>
-        <img className="h-full w-full" src="https://t4.ftcdn.net/jpg/00/65/70/65/360_F_65706597_uNm2SwlPIuNUDuMwo6stBd81e25Y8K8s.jpg" alt="" />
-
-      </div>
-      {/* <Carousel className="rounded-none h-[40vh] overflow-hidden md:h-[60vh]">
+    <div>
+      <Carousel className="rounded-none h-[40vh] overflow-hidden md:h-[60vh]">
         <div className="relative h-full w-ful">
           <img
             src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
@@ -111,39 +97,26 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </Carousel> */}
+      </Carousel>
 
-      <div className='w-20vw bg-white'>
+      <div className='w-20vw bg-gray-500'>
         <h1 className='text-center text-3xl text-black font-extrabold p-5 underline'>Featured fruits & juice products</h1>
       </div>
-      <div className='p-5 grid grid-cols-4  gap-4 items-start lg:grid-cols-2 bg-white'>
+      <div className='p-5 grid grid-cols-4  gap-4 items-start lg:grid-cols-2 bg-gray-500'>
         {data && data?.product.map((product) => {
           return <CardUi key={product._id} product={product} />
         })}
 
       </div>
 
-      <div className="banner h-[50vh]">
-        <div className="banner1 bg-red-700 h-full grid grid-cols-2">
-          <div className='flex justify-center items-center flex-col'>
-            <p className='text-4xl font-bold'>50% off</p>
-            <p className='text-4xl font-bold'>On</p>
-            <p className='text-4xl font-bold'>Festival Offer</p>
-            <p className='text-4xl font-bold text-blue-400'> Grab now!</p>
-          </div>
 
-          <div className='flex justify-center items-center'>
-            <img className='h-[40vh]' src="https://play-lh.googleusercontent.com/_2tOP5az8B2Fna4Lr51nc0CVxUh8uFa_IVpzv9zQ1YxH03EyzvC7c5EVn4vSSWHLdA" alt="" />
-          </div>
-        </div>
-
-      </div>
-
-      {/* <div className='flex space-x-5 justify-center'>
+      <div className='flex space-x-5 justify-center'>
         <button disabled={data?.page !== 1 ? true : false} onClick={() => nav(-1)} >PREV</button>
         <h1 className='text-black'>{data.page}</h1>
         <button onClick={() => nav(`/searchpage/${data.page + 1}`)} >Next</button>
-      </div> */}
+      </div>
+
+
 
 
 
@@ -198,9 +171,9 @@ const HomePage = () => {
           </ul>
         </footer>
       </div>
-    </div>
 
+    </div>
   )
 }
 
-export default HomePage
+export default Fruits

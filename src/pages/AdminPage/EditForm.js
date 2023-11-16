@@ -71,7 +71,7 @@ const EditForm = ({ product }) => {
             token: userInfo.token,
             id: product._id
           });
-          toast.success('product added successfully');
+          toast.success('product updated successfully');
           nav(-1);
 
         } else {
@@ -83,7 +83,7 @@ const EditForm = ({ product }) => {
             id: product._id,
             imagePath: product.product_image
           });
-          toast.success('product added successfully');
+          toast.success('product uodated successfully');
           nav(-1);
 
         }
@@ -179,6 +179,7 @@ const EditForm = ({ product }) => {
                   <Option value='tech'>Tech</Option>
                   <Option value='games'>Games</Option>
                   <Option value='friuts'>Fruits</Option>
+                  <Option value='Friut Juice'>Fruit Juice</Option>
                   <Option value='beauty products'>Beauty Products</Option>
                 </Select>
               </div>

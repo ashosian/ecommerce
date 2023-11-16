@@ -148,6 +148,7 @@ const AddProduct = () => {
                   <Option value='tech'>Tech</Option>
                   <Option value='games'>Games</Option>
                   <Option value='fruits'>Fruits</Option>
+                  <Option value='Fruit Juice'>Fruit Juice</Option>
                   <Option value='beauty products'>Beauty Products</Option>
                 </Select>
               </div>

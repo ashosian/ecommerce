@@ -102,6 +102,7 @@ const Header = () => {
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/about'>About</NavLink>
             <NavLink to='/contact'>Contact</NavLink>
+            <NavLink to='fruit'>Fruits</NavLink>
           </MenuList>
         </Menu>
 
@@ -154,6 +155,8 @@ const Header = () => {
           <div className="space-x-5 md:hidden">
 
 
+            <NavLink to='fruit'>Fruits</NavLink>
+            <NavLink to='juice'>Juices</NavLink>
             <NavLink to='/about'>About</NavLink>
             <NavLink to='/contact'>Contact</NavLink>
             {userInfo === null && <NavLink to='/user/login'>Login</NavLink>}

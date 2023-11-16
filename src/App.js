@@ -24,6 +24,8 @@ import Contact from './pages/Contact';
 import Search from './pages/Search';
 import SearchPage from './pages/SearchPage';
 import ProductList2 from './pages/AdminPage/ProductList2';
+import Fruits from './pages/Fruits';
+import Juice from './pages/Juice';
 
 
 const App = () => {
@@ -45,6 +47,8 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />
+          <Route path='fruit' element={<Fruits />} />
+          <Route path='juice' element={<Juice />} />
           <Route path='searchItems/:search' element={<Search />} />
           <Route path="/searchpage/:page" element={<SearchPage />} />
 

@@ -42,7 +42,7 @@ const ProductDetail = () => {
 
   return (
     <div className="">
-      <div className="grid grid-cols-3 p-7 gap-5 sm:grid-cols-1">
+      <div className="grid grid-cols-3 p-7 gap-5 sm:grid-cols-1 bg-gray-400">
 
         <div>
           <Image
