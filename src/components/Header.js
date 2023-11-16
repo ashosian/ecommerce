@@ -123,7 +123,7 @@ const Header = () => {
 
             <div className="box2 space-x-7 flex items-center ">
 
-              <div className="relative flex w-full gap-2 md:w-max">
+              <div className="relative flex w-full gap-2 md:w-max items-center">
                 <Input
                   type="search"
                   name='anything'
