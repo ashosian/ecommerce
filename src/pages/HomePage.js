@@ -27,7 +27,7 @@ const HomePage = () => {
           <p className='text-2xl font-bold md:text-sm'>Trade-in-Offer</p>
           <p className='text-6xl font-bold md:text-xl text-center'>Super value deals</p>
           <p className='text-6xl font-bold text-teal-400 lg:text-center'>On all fruits and juices</p>
-          <p className='my-10 text-2xl cursor-pointer hover:scale-105 font-bold hover:text-teal-400'>Shop now</p>
+          <p className='my-10 text-2xl cursor-pointer hover:scale-105 font-bold hover:text-teal-400' onClick={() => nav('/fruit')}>Shop now</p>
         </div>
         <img className="h-full w-full" src="https://t4.ftcdn.net/jpg/00/65/70/65/360_F_65706597_uNm2SwlPIuNUDuMwo6stBd81e25Y8K8s.jpg" alt="" />
 

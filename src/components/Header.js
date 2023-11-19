@@ -102,7 +102,7 @@ const Header = () => {
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/about'>About</NavLink>
             <NavLink to='/contact'>Contact</NavLink>
-            <NavLink to='fruit'>Fruits</NavLink>
+            <NavLink to='fruit'>Fruits & juices</NavLink>
           </MenuList>
         </Menu>
 
@@ -123,7 +123,7 @@ const Header = () => {
 
             <div className="box2 space-x-7 flex items-center ">
 
-              <div className="relative flex w-full gap-2 md:w-max items-center">
+              <div className="relative flex items-center  w-full gap-2 lg:w-max ">
                 <Input
                   type="search"
                   name='anything'
@@ -155,8 +155,7 @@ const Header = () => {
           <div className="space-x-5 md:hidden">
 
 
-            <NavLink to='fruit'>Fruits</NavLink>
-            <NavLink to='juice'>Juices</NavLink>
+            <NavLink to='fruit'>Fruits & Juices</NavLink>
             <NavLink to='/about'>About</NavLink>
             <NavLink to='/contact'>Contact</NavLink>
             {userInfo === null && <NavLink to='/user/login'>Login</NavLink>}
