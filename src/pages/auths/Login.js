@@ -59,8 +59,8 @@ const Login = () => {
 
 
   return (
-    <Card color="transparent" shadow={false} className='mx-auto max-w-xl mt-24 space-y-9 h-[80vh]'  >
-      <Typography variant="h4" color="blue-gray">
+    <Card color="transparent" shadow={false} className='mx-auto max-w-sm mt-24 space-y-5 h-[50vh] bg-light-green-200 rounded-2xl'  >
+      <Typography className="text-center" variant="h4" color="blue-gray">
         Login Form
       </Typography>
 
