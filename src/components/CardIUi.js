@@ -38,9 +38,9 @@ const CardUi = ({ product }) => {
         <Typography>
           {product.product_detail}
         </Typography>
-        {product.numReviews > 0 && <div>
+        {product?.numReviews > 0 && <div>
           <div className="flex justify-between">
-            <Rating value={product.rating} readonly />
+            <Rating value={5} readonly />
             <h1> Reviews {product.numReviews}</h1>
           </div>
 
