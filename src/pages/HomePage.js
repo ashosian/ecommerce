@@ -22,10 +22,10 @@ const HomePage = () => {
 
   return (
     <div className=''>
-      <div className="background h-[90vh] bg-white grid grid-cols-2">
+      <div className="background h-[90vh] bg-white grid grid-cols-2 lg:grid-cols-1">
         <div className='flex justify-center items-center flex-col'>
           <p className='text-2xl font-bold md:text-sm'>Trade-in-Offer</p>
-          <p className='text-6xl font-bold md:text-xl text-center'>Super value deals</p>
+          <p className='text-6xl font-bold md:text-xl animate-bounce text-center'>Super value deals</p>
           <p className='text-6xl font-bold text-teal-400 lg:text-center'>On all fruits and juices</p>
           <p className='my-10 text-2xl cursor-pointer hover:scale-105 font-bold hover:text-teal-400' onClick={() => nav('/fruit')}>Shop now</p>
         </div>
