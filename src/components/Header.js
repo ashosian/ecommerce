@@ -103,6 +103,7 @@ const Header = () => {
             <NavLink to='/about'>About</NavLink>
             <NavLink to='/contact'>Contact</NavLink>
             <NavLink to='fruit'>Fruits & juices</NavLink>
+            {userInfo === null && <NavLink to='/user/login'>Login</NavLink>}
           </MenuList>
         </Menu>
 
