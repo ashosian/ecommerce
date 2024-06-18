@@ -10,12 +10,16 @@ import {
 import { baseUrl } from "../features/constant";
 import { useNavigate } from "react-router";
 import { Image, Shimmer } from 'react-shimmer'
+import { useState } from "react";
 
 
 const CardUi = ({ product }) => {
 
   const nav = useNavigate();
+  console.log(product.rating)
+  console.log(product)
 
+  const [rating,setRating]=useState(product.rating)
 
   return (
     <Card className="mt-6 w-full cursor-pointer  transition-all delay-75 shadow-lg hover:scale-90 hover:shadow-2xl " onClick={() => nav(`/product/detail/${product._id}`)}>
@@ -40,8 +44,10 @@ const CardUi = ({ product }) => {
         </Typography>
         {product?.numReviews > 0 && <div>
           <div className="flex justify-between">
-            <Rating value={5} readonly />
-            <h1> Reviews {product.numReviews}</h1>
+          {product.rating && 
+            <Rating value={product.rating} readonly />
+          }
+            {/* <h1> Reviews {product.numReviews}</h1> */}
           </div>
 
         </div>

@@ -37,8 +37,8 @@ const HomePage = () => {
         <h1 className='text-center text-3xl text-black font-extrabold p-5 underline'>Featured fruits & juice products</h1>
       </div>
       <div className='p-5 grid grid-cols-4  gap-4 items-start lg:grid-cols-2 bg-white'>
-        {data && data?.product.map((prod) => {
-          return <CardUi key={prod._id} product={prod} />
+        {data && data?.product.map((product) => {
+          return <CardUi key={product._id} product={product} />
         })}
 
       </div>

@@ -62,7 +62,7 @@ const ProductDetail = () => {
           </h1> : <div>
 
             <div className="flex justify-between">
-              <Rating value={product.rating} readonly />
+              <Rating value={4} readonly />
               <h1> Reviews {product.numReviews}</h1>
             </div>
 
